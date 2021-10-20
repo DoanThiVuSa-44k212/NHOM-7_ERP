@@ -11,6 +11,7 @@
     ],
     'data': [
         'Views/Products.xml',
+        'Views/damaged_goods.xml',
         'Menu/Menu.xml'
     ],
     'demo': [],
