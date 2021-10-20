@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="mail.menu_root_discuss" model="ir.ui.menu">
+            <field name="sequence" eval="1"/>
+
+        </record>
+
+        <menuitem id="rma_menu_view" name="RMA" sequence="10"/>
+
+        <menuitem id="product_menu_view"
+                  name="Product"
+                  action="rma_action"
+                  parent="rma_menu_view" sequence="10"/>
+
+    </data>
+</odoo>
