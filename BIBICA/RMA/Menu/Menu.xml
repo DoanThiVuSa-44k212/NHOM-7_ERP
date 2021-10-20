@@ -5,18 +5,23 @@
             <field name="sequence" eval="1"/>
 
         </record>
-
+        <!--Menu Sản Phẩm-->
         <menuitem id="rma_menu_view" name="RMA" sequence="10"/>
 
         <menuitem id="product_menu_view"
-                  name="Product"
+                  name="Sản Phẩm"
                   action="rma_menu_action"
                   parent="rma_menu_view" sequence="10"/>
 
         <menuitem id="product_product_view"
-                  name="Add Product"
+                  name="Thêm Sản Phẩm"
                   action="rma_product_action"
                   parent="product_menu_view" sequence="10"/>
+
+        <menuitem id="damaged_goods_view"
+                  name="Xử Lý Hàng Hỏng"
+                  action="rma_damaged_goods_action"
+                  parent="rma_menu_view" sequence="10"/>
 
     </data>
 </odoo>
