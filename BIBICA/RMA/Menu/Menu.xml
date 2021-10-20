@@ -10,8 +10,13 @@
 
         <menuitem id="product_menu_view"
                   name="Product"
-                  action="rma_action"
+                  action="rma_menu_action"
                   parent="rma_menu_view" sequence="10"/>
+
+        <menuitem id="product_product_view"
+                  name="Add Product"
+                  action="rma_product_action"
+                  parent="product_menu_view" sequence="10"/>
 
     </data>
 </odoo>
