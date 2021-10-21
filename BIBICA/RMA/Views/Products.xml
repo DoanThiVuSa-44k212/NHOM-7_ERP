@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
+<!--        <record id="rma_product_tree_view" model="ir.ui.view">-->
+<!--            <field name="name">product_tree_view</field>-->
+<!--            <field name="model">product.template</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <tree string="Product" multi_edit="1" sample="1">-->
+<!--                    <xpath expr="//field[@name='name']/tree" position="attributes">-->
+<!--                        <attribute name="string">Tên Sản Phẩm</attribute>-->
+<!--                    </xpath>-->
+<!--                    <field name="wage" optional="show"></field>-->
+<!--                    &lt;!&ndash;                    <field name="default_code" string="Tài Liệu Tham Khảo"/>&ndash;&gt;-->
+<!--                    &lt;!&ndash;                    <field name="list_price" string="Giá Bán"/>&ndash;&gt;-->
+<!--                    &lt;!&ndash;                    <field name="standard_price" string="Giá Gốc"/>&ndash;&gt;-->
+<!--                </tree>-->
+<!--            </field>-->
+<!--        </record>-->
 
         <record id="product_template_form" model="ir.ui.view">
             <field name="name">product.template.form</field>
@@ -10,6 +25,45 @@
                 <field name="company_id" position="after">
                     <field name="wage"></field>
                 </field>
+                <xpath expr="//label[@for='name']" position="attributes">
+                    <attribute name="string">Tên Sản Phẩm</attribute>
+                </xpath>
+                <xpath expr="//label[@for='sale_ok']" position="attributes">
+                    <attribute name="string">Có thể bán</attribute>
+                </xpath>
+                <xpath expr="//field[@name='purchase_ok']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//label[@for='purchase_ok']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='type']" position="attributes">
+                    <attribute name="string">Kiểu Sản Phẩm</attribute>
+                </xpath>
+                <xpath expr="//field[@name='categ_id']" position="attributes">
+                    <attribute name="string">Loại Sản Phẩm</attribute>
+                </xpath>
+                <xpath expr="//field[@name='default_code']" position="attributes">
+                    <attribute name="string">Tài Liệu Tham Khảo</attribute>
+                </xpath>
+                <xpath expr="//field[@name='barcode']" position="attributes">
+                    <attribute name="string">Mã Vạch</attribute>
+                </xpath>
+                <xpath expr="//label[@for='list_price']" position="attributes">
+                    <attribute name="string">Giá Bán</attribute>
+                </xpath>
+                <!--                <xpath expr="//label[@for='taxes_id']" position="attributes">-->
+                <!--                    <attribute name="invisible">Thuế Khách Hàng</attribute>-->
+                <!--                </xpath>-->
+                <xpath expr="//field[@name='standard_price']" position="attributes">
+                    <attribute name="string">Mã Vạch</attribute>
+                </xpath>
+                <xpath expr="//label[@for='standard_price']" position="attributes">
+                    <attribute name="string">Mã Vạch</attribute>
+                </xpath>
+                <xpath expr="//field[@name='company_id']" position="attributes">
+                    <attribute name="string">Công Ty</attribute>
+                </xpath>
             </field>
         </record>
 
