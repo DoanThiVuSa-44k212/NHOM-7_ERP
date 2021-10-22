@@ -13,6 +13,7 @@
         'Views/Products.xml',
         'Views/damaged_goods.xml',
         'Views/productpreserve.xml',
+        'Views/receive_returned_goods.xml',
         'Menu/Menu.xml'
     ],
     'demo': [],
