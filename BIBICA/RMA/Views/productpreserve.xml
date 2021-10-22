@@ -15,19 +15,9 @@
     </record>
 
 
-    <menuitem id="rma_root"
-            name="RMA"
-            sequence="10"/>
-
-    <menuitem id="rma_productpreserve_root"
-            name="Product Preserve"
-            parent="rma_root"
-            sequence="10"/>
-
     <menuitem id="rma_productpreserve"
-            name="Product Preserve"
-            parent="rma_productpreserve_root"
-            action="productpreserve_action"
+              name="Product Preserve"
+              action="productpreserve_action"
               sequence="10"/>
 
 </odoo>
