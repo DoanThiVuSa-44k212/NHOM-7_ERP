@@ -1,10 +1,10 @@
 from odoo import api, fields, models, tools
 
 
-class Returned_goods(models.Model):
-    _name = "Returned.goods"
+class receivereturnedgoods(models.Model):
+    _name = 'receive.returned'
 
-    name = fields.Many2many('product.template', 'name', String="Tên Sản Phẩm")
+    pname= fields.Many2many('product.template', string="Tên SP")
     input_date = fields.Date(string="Ngày Nhận Hàng Hóa")
     quantity = fields.Integer(string="Số Lượng")
     import_date= fields.Date(string="Ngày Nhập Hàng Hóa")
@@ -20,4 +20,3 @@ class Returned_goods(models.Model):
         ("chapnhan", "Chấp Nhận"),
         ("khongchapnhan", "Không Chấp Nhận"),
     ], string="Trạng Thái", default=False)
-
