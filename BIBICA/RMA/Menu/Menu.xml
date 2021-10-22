@@ -23,5 +23,11 @@
                   action="rma_damaged_goods_action"
                   parent="rma_menu_view" sequence="10"/>
 
+        <menuitem id="productpreserve_action_view"
+                  name="Product Preserve"
+                  action="productpreserve_action"
+                  parent="rma_menu_view" sequence="10"/>
+
+
     </data>
 </odoo>
