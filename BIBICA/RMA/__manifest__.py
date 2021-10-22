@@ -6,13 +6,9 @@
     'description': """RMA BIBICA""",
     'category': 'Productivity',
     'license': 'LGPL-3',
-    'depends': [
-        'product'
-    ],
+    'depends': [],
     'data': [
-        'Views/Products.xml',
-        'Views/damaged_goods.xml',
-        'Menu/Menu.xml'
+        'views/productpreserve.xml'
     ],
     'demo': [],
     'qweb': [],
