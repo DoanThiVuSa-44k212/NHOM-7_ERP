@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="rma_Receive_returned_goods_tree_view" model="ir.ui.view">
+            <field name="name">damaged_goods_tree_view</field>
+            <field name="model">Returned.goods</field>
+            <field name="arch" type="xml">
+                <tree string="Receive_returned_goods" default_order="create_date desc">
+                    <field name="name" string="Tên Sản Phẩm"/>
+                    <field name="quantity"/>
+                    <field name="input_date"/>
+                    <field name="import_date"/>
+                    <field name="export_date"/>
+                    <field name="expiry_date"/>
+                    <field name="company_name"/>
+                    <field name="address_name"/>
+                    <field name="delegate_name"/>
+                    <field name="phone"/>
+                    <field name=" emai"/>
+                    <field name="description"/>
+                    <field name="status"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="rma_Receive_returned_goods_action" model="ir.actions.act_window">
+            <field name="name">Nhận hàng hóa</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">Returned.goods</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Thêm Dữ Liệu Nào
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>
