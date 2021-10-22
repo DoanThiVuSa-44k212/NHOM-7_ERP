@@ -28,6 +28,11 @@
                   action="productpreserve_action"
                   parent="rma_menu_view" sequence="10"/>
 
+        <menuitem id="Receive_returned_goods_action_view"
+                  name="Receive Returned Goods"
+                  action="rma_Receive_returned_goods_action"
+                  parent="rma_menu_view" sequence="10"/>
+
 
     </data>
 </odoo>
