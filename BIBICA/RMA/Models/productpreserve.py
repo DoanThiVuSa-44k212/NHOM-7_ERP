@@ -4,7 +4,7 @@ class rmaproductpreserve(models.Model):
     _name = "rma.productpreserve"
     _description = "RMA Product Preserve"
 
-    name = fields.Char(string='Tên hàng', required=True)
+    pname= fields.Many2many('product.template', string="Tên SP")
     Ma_Hang = fields.Integer(string='Mã hàng')
     datebq=fields.Date(string='Ngày nhập kho bảo quản')
     datehh = fields.Date(string='Ngày nhập kho hàng hóa')
