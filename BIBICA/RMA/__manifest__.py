@@ -7,11 +7,14 @@
     'category': 'Productivity',
     'license': 'LGPL-3',
     'depends': [
-        'product'
+        'product',
+        'stock',
+        'uom'
     ],
     'data': [
         'Views/Products.xml',
-        'Views/damaged_goods.xml',
+        'Views/product_type.xml',
+        'Views/scrap_goods.xml',
         'Views/productpreserve.xml',
         'Views/receive_returned_goods.xml',
         'Menu/Menu.xml'
