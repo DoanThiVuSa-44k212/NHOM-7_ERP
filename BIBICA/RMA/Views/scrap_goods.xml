@@ -15,7 +15,7 @@
                 <xpath expr="//field[@name='product_id']" position="attributes">
                     <attribute name="string">Tên Sản Phẩm</attribute>
                 </xpath>
-                <xpath expr="//field[@name='scrap_qty']" position="attributes">
+                <xpath expr="//label[@for='scrap_qty']" position="attributes">
                     <attribute name="string">Số Lượng</attribute>
                 </xpath>
                 <xpath expr="//field[@name='company_id']" position="attributes">
@@ -24,20 +24,29 @@
                 <xpath expr="//field[@name='origin']" position="attributes">
                     <attribute name="string">Tài Liệu Nguồn</attribute>
                 </xpath>
+
                 <sheet>
                     <group>
                         <group>
-                            <field name="product_status"></field>
-                            <field name="processing_date"></field>
+                            <field name="product_status"/>
+                            <field name="processing_date"/>
 
                         </group>
                         <group>
-                            <field name="input_date"></field>
+                            <field name="input_date"/>
                         </group>
                     </group>
                     <notebook>
                         <page name="employee_page" string="Nhân Viên">
-                            <field name="employee"></field>
+                            <field name="employee"/>
+                        </page>
+                        <page name="information" string="Thông Tin Sản Phẩm">
+                            <group>
+                                <field name="categ_id"/>
+                            </group>
+                            <group>
+                                <field name="list_price"/>
+                            </group>
                         </page>
                         <page name="note" string="Ghi Chú">
                             <group name="note">
