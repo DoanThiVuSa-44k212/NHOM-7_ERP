@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <record id="product_stock_form" model="ir.ui.view">
+        <field name="name">product.stock.form</field>
+        <field name="model">stock.inventory</field>
+        <field name="inherit_id" ref="stock.view_inventory_form"/>
+        <field name="arch" type="xml">
+            <field name="exhausted" position="after">
+                <field name="Kho"/>
+            </field>
+            <xpath expr="//label[@for='name']" position="attributes">
+                <attribute name="string">Tên Nghiệp vụ</attribute>
+            </xpath>
+            <xpath expr="//field[@name='product_ids']" position="attributes">
+                <attribute name="string">Sản Phẩm</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='company_id']" position="attributes">
+                <attribute name="string">Công Ty</attribute>
+            </xpath>
+            <xpath expr="//field[@name='prefill_counted_quantity']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+        </field>
+    </record>
 
     <record id="productpreserve_action" model="ir.actions.act_window">
         <field name="name">Bảo Quản Sản Phẩm</field>
         <field name="type">ir.actions.act_window</field>
-        <field name="res_model">rma.productpreserve</field>
-        <field name="view_mode">tree,kanban,form</field>
+        <field name="res_model">stock.inventory</field>
+        <field name="view_mode">tree,form</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Create your first productpreserve!
@@ -14,9 +38,9 @@
     </record>
 
 
-    <menuitem id="rma_productpreserve"
-              name="Product Preserve"
-              action="productpreserve_action"
-              sequence="10"/>
+    <!--    <menuitem id="rma_productpreserve"-->
+    <!--              name="Product Preserve"-->
+    <!--              action="productpreserve_action"-->
+    <!--              sequence="10"/>-->
 
 </odoo>
