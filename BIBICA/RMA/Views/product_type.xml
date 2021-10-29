@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="product_type_form" model="ir.ui.view">
+        <field name="name">product.type.form</field>
+        <field name="model">product.type</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group name="type">
+                        <field name="name"></field>
+                        <field name="unit_of_measure"></field>
+                    </group>
+                    <group>
+                        <field name="description"></field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="product_type_tree_view" model="ir.ui.view">
+        <field name="name">product_type_tree_view</field>
+        <field name="model">product.type</field>
+        <field name="arch" type="xml">
+            <tree string="product_type" default_order="create_date desc">
+                <field name="name"/>
+                <field name="unit_of_measure"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="product_type_action" model="ir.actions.act_window">
+        <field name="name">Loại Sản Phẩm</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.type</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Thêm Loại Sản Phẩm!
+            </p>
+        </field>
+    </record>
+
+</odoo>
