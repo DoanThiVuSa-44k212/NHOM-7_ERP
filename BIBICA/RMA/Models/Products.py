@@ -7,4 +7,6 @@ class ProductTemplate(models.Model):
     _name = 'product.template'
     _inherit = 'product.template'
 
-    wage = fields.Integer(string='Wage')
+    weight = fields.Integer(string='Cân Nặng')
+    pr_type = fields.Many2one(comodel_name='product.type', string="Loại Sản Phẩm", delegate=True)
+    unit_of_measure = fields.Many2one('uom.uom', related="pr_type.unit_of_measure", string='Đơn Vị Tính')
