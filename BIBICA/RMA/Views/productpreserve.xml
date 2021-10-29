@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-
     <record id="productpreserve_action" model="ir.actions.act_window">
-        <field name="name">Product Preserve</field>
+        <field name="name">Bảo Quản Sản Phẩm</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">rma.productpreserve</field>
         <field name="view_mode">tree,kanban,form</field>
