@@ -7,7 +7,7 @@
         </record>
         <!--Menu Sản Phẩm-->
         <menuitem id="rma_menu_view" name="RMA" sequence="10"/>
-
+        <!--Sản Phẩm-->
         <menuitem id="product_menu_view"
                   name="Sản Phẩm"
                   action="rma_menu_action"
@@ -18,18 +18,24 @@
                   action="rma_product_action"
                   parent="product_menu_view" sequence="10"/>
 
+        <menuitem id="product_type_view"
+                  name="Loại Sản Phẩm"
+                  action="product_type_action"
+                  parent="product_menu_view" sequence="11"/>
+
+        <!--Hàng Hóa Hỏng-->
         <menuitem id="damaged_goods_view"
                   name="Xử Lý Hàng Hỏng"
                   action="rma_damaged_goods_action"
                   parent="rma_menu_view" sequence="10"/>
-
+        <!--Bảo Quản Sản Phẩm-->
         <menuitem id="productpreserve_action_view"
-                  name="Product Preserve"
+                  name="Bảo Quản Sản Phẩm"
                   action="productpreserve_action"
                   parent="rma_menu_view" sequence="10"/>
-
+        <!--Hàng Trả Về-->
         <menuitem id="Receive_returned_goods_action_view"
-                  name="Receive Returned Goods"
+                  name="Hàng Trả Về"
                   action="rma_Receive_returned_goods_action"
                   parent="rma_menu_view" sequence="10"/>
 
