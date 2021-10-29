@@ -21,7 +21,21 @@
             <xpath expr="//field[@name='prefill_counted_quantity']" position="attributes">
                 <attribute name="invisible">1</attribute>
             </xpath>
+            <sheet>
+                    <group>
+                        <group>
+                            <field name="datebq"/>
 
+                        </group>
+                        <group>
+                            <field name="datehh"/>
+                            <field name="thoigianbaoquan"/>
+                        </group>
+                        <group>
+                            <field name="Nhietdo"/>
+                        </group>
+                    </group>
+            </sheet>
         </field>
     </record>
 
