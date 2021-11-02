@@ -1,48 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="product_stock_form" model="ir.ui.view">
-        <field name="name">product.stock.form</field>
-        <field name="model">stock.inventory</field>
-        <field name="inherit_id" ref="stock.view_inventory_form"/>
+    <record id="product_preserve_form" model="ir.ui.view">
+        <field name="name">product.preserve.form</field>
+        <field name="model">product.preserve</field>
         <field name="arch" type="xml">
-            <field name="exhausted" position="after">
-                <field name="Kho"/>
-            </field>
-            <xpath expr="//label[@for='name']" position="attributes">
-                <attribute name="string">Tên Nghiệp vụ</attribute>
-            </xpath>
-            <xpath expr="//field[@name='product_ids']" position="attributes">
-                <attribute name="string">Sản Phẩm</attribute>
-            </xpath>
-
-            <xpath expr="//field[@name='company_id']" position="attributes">
-                <attribute name="string">Công Ty</attribute>
-            </xpath>
-            <xpath expr="//field[@name='prefill_counted_quantity']" position="attributes">
-                <attribute name="invisible">1</attribute>
-            </xpath>
-            <sheet>
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name" string="Tên Nghiệp Vụ" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name" placeholder="Tên Nghiệp Vụ"/>
+                        </h1>
+                    </div>
                     <group>
                         <group>
-                            <field name="datebq"/>
-
-                        </group>
-                        <group>
+                            <field name="company_id"/>
                             <field name="datehh"/>
+                        </group>
+
+                        <group>
+                            <field name="datebq"/>
                             <field name="thoigianbaoquan"/>
                         </group>
                         <group>
+                            <field name="Kho"/>
                             <field name="Nhietdo"/>
                         </group>
                     </group>
-            </sheet>
+                    <notebook>
+                        <page string="Các Sản Phẩm">
+                            <field name="preserve_lines">
+                                <tree editable="bottom">
+                                    <field name="product_id"/>
+                                    <field name="product_qty"/>
+                                    <field name="preserve_id" invisible="1"/>
+                                </tree>
+                                <form>
+                                    <group>
+                                        <group>
+                                            <field name="product_id"/>
+                                        </group>
+                                        <group>
+                                            <field name="product_qty"/>
+                                        </group>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="product_preseve_tree_view" model="ir.ui.view">
+        <field name="name">product.preseve.tree.view</field>
+        <field name="model">product.preserve</field>
+        <field name="arch" type="xml">
+            <tree string="Product Preserve" default_order="create_date desc">
+                <field name="name"/>
+                <field name="Nhietdo"/>
+            </tree>
         </field>
     </record>
 
     <record id="productpreserve_action" model="ir.actions.act_window">
         <field name="name">Bảo Quản Sản Phẩm</field>
         <field name="type">ir.actions.act_window</field>
-        <field name="res_model">stock.inventory</field>
+        <field name="res_model">product.preserve</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
@@ -51,10 +76,5 @@
         </field>
     </record>
 
-
-    <!--    <menuitem id="rma_productpreserve"-->
-    <!--              name="Product Preserve"-->
-    <!--              action="productpreserve_action"-->
-    <!--              sequence="10"/>-->
 
 </odoo>
