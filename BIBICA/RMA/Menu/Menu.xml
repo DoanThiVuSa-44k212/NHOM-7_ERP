@@ -28,12 +28,12 @@
                   name="Xử Lý Hàng Hỏng"
                   action="rma_damaged_goods_action"
                   parent="rma_menu_view" sequence="10"/>
-        Bảo Quản Sản Phẩm
+<!--        Bảo Quản Sản Phẩm-->
         <menuitem id="productpreserve_action_view"
                   name="Bảo Quản Sản Phẩm"
                   action="productpreserve_action"
                   parent="rma_menu_view" sequence="10"/>
-        Hàng Trả Về
+<!--        Hàng Trả Về-->
         <menuitem id="Receive_returned_goods_action_view"
                   name="Hàng Trả Về"
                   action="rma_Receive_returned_goods_action"
