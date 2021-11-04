@@ -16,7 +16,8 @@
         'Views/product_type.xml',
         'Views/scrap_goods.xml',
         'Views/productpreserve.xml',
-        'Views/receive_returned_goods.xml',
+        'Views/product_ingredients.xml',
+        'Views/Return.xml',
         'Menu/Menu.xml'
     ],
     'demo': [],
