@@ -23,6 +23,11 @@
                   action="product_type_action"
                   parent="product_menu_view" sequence="11"/>
 
+        <menuitem id="product_ingredients_view"
+                  name="Thành Phần Sản Phẩm"
+                  action="product_ingredients_action"
+                  parent="product_menu_view" sequence="12"/>
+
         <!--Hàng Hóa Hỏng-->
         <menuitem id="damaged_goods_view"
                   name="Xử Lý Hàng Hỏng"
@@ -34,9 +39,9 @@
                   action="productpreserve_action"
                   parent="rma_menu_view" sequence="10"/>
 <!--        Hàng Trả Về-->
-        <menuitem id="Receive_returned_goods_action_view"
+        <menuitem id="Return_action_view"
                   name="Hàng Trả Về"
-                  action="rma_Receive_returned_goods_action"
+                  action="rma_Return_action"
                   parent="rma_menu_view" sequence="10"/>
 
 
