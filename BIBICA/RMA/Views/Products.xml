@@ -31,7 +31,7 @@
                     <attribute name="string">Kiểu Sản Phẩm</attribute>
                 </xpath>
                 <xpath expr="//field[@name='categ_id']" position="attributes">
-                    <attribute name="string">Danh Mục Sản Phẩm</attribute>
+                    <attribute name="invisible">1</attribute>
                 </xpath>
                 <xpath expr="//field[@name='default_code']" position="attributes">
                     <attribute name="string">Tài Liệu Tham Khảo</attribute>
@@ -54,7 +54,36 @@
                 <xpath expr="//field[@name='company_id']" position="attributes">
                     <attribute name="string">Công Ty</attribute>
                 </xpath>
+                <xpath expr="//group" position="after">
 
+                    <notebook>
+                        <page string="Các Thành Phần">
+                            <field name="thanhphan_lines">
+                                <tree editable="bottom">
+                                    <field name="tentp"/>
+                                    <field name="soluong"/>
+                                    <field name="congdung"/>
+                                    <field name="thanhphan_id" invisible="1"/>
+                                </tree>
+                                <form>
+                                    <group>
+                                        <group>
+                                            <field name="tentp"/>
+                                        </group>
+                                        <group>
+                                            <field name="soluong"/>
+                                        </group>
+                                        <group>
+                                            <field name="congdung"/>
+                                        </group>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+
+
+                </xpath>
             </field>
         </record>
 
