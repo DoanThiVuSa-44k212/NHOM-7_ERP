@@ -15,47 +15,16 @@
                 <field name='pr_type' position="after">
                     <field name="unit_of_measure"/>
                 </field>
-                <xpath expr="//label[@for='name']" position="attributes">
-                    <attribute name="string">Tên Sản Phẩm</attribute>
-                </xpath>
-                <xpath expr="//label[@for='sale_ok']" position="attributes">
-                    <attribute name="string">Có thể bán</attribute>
-                </xpath>
                 <xpath expr="//field[@name='purchase_ok']" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </xpath>
                 <xpath expr="//label[@for='purchase_ok']" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </xpath>
-                <xpath expr="//field[@name='type']" position="attributes">
-                    <attribute name="string">Kiểu Sản Phẩm</attribute>
-                </xpath>
                 <xpath expr="//field[@name='categ_id']" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </xpath>
-                <xpath expr="//field[@name='default_code']" position="attributes">
-                    <attribute name="string">Tài Liệu Tham Khảo</attribute>
-                </xpath>
-                <xpath expr="//field[@name='barcode']" position="attributes">
-                    <attribute name="string">Mã Vạch</attribute>
-                </xpath>
-                <xpath expr="//label[@for='list_price']" position="attributes">
-                    <attribute name="string">Giá Bán</attribute>
-                </xpath>
-                <!--                <xpath expr="//label[@for='taxes_id']" position="attributes">-->
-                <!--                    <attribute name="invisible">Thuế Khách Hàng</attribute>-->
-                <!--                </xpath>-->
-                <xpath expr="//field[@name='standard_price']" position="attributes">
-                    <attribute name="string">Mã Vạch</attribute>
-                </xpath>
-                <xpath expr="//label[@for='standard_price']" position="attributes">
-                    <attribute name="string">Mã Vạch</attribute>
-                </xpath>
-                <xpath expr="//field[@name='company_id']" position="attributes">
-                    <attribute name="string">Công Ty</attribute>
-                </xpath>
                 <xpath expr="//group" position="after">
-
                     <notebook>
                         <page string="Các Thành Phần">
                             <field name="thanhphan_lines">
@@ -81,8 +50,6 @@
                             </field>
                         </page>
                     </notebook>
-
-
                 </xpath>
             </field>
         </record>
