@@ -17,6 +17,7 @@
         'Views/scrap_goods.xml',
         'Views/productpreserve.xml',
         'Views/product_ingredients.xml',
+        'Views/temporary_warehouse.xml',
         'Views/Return.xml',
         'Menu/Menu.xml'
     ],
