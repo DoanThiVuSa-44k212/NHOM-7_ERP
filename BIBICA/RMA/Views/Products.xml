@@ -6,13 +6,14 @@
             <field name="model">product.template</field>
             <field name="inherit_id" ref="product.product_template_only_form_view"/>
             <field name="arch" type="xml">
-                <field name="company_id" position="after">
-                    <field name="weight"/>
-                </field>
+
                 <field name='barcode' position="after">
                     <field name="pr_type"/>
                 </field>
-                <field name='pr_type' position="after">
+                <field name="pr_type" position="after">
+                    <field name="weight"/>
+                </field>
+                <field name='weight' position="after">
                     <field name="unit_of_measure"/>
                 </field>
                 <xpath expr="//field[@name='purchase_ok']" position="attributes">
@@ -24,6 +25,12 @@
                 <xpath expr="//field[@name='categ_id']" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </xpath>
+                <field name='company_id' position="after">
+                    <field name="hansudung"/>
+                </field>
+                <field name='hansudung' position="after">
+                    <field name="baohanh"/>
+                </field>
                 <xpath expr="//group" position="after">
                     <notebook>
                         <page string="Các Thành Phần">
