@@ -34,10 +34,21 @@
                   action="rma_damaged_goods_action"
                   parent="rma_menu_view" sequence="10"/>
 <!--        Bảo Quản Sản Phẩm-->
-        <menuitem id="productpreserve_action_view"
+        <menuitem id="preserve_view"
                   name="Bảo Quản Sản Phẩm"
                   action="productpreserve_action"
                   parent="rma_menu_view" sequence="10"/>
+
+        <menuitem id="productpreserve_action_view"
+                  name="Phiếu Bảo Quản"
+                  action="productpreserve_action"
+                  parent="preserve_view" sequence="11"/>
+
+        <menuitem id="temporary_warehouses"
+                  name="Kho Chứa Tạm Thời"
+                  action="temporary_warehouse_action"
+                  parent="preserve_view" sequence="12"/>
+
 <!--        Hàng Trả Về-->
         <menuitem id="Return_action_view"
                   name="Hàng Trả Về"
