@@ -13,32 +13,39 @@
                     </group>
                 </xpath>
                 <xpath expr="//field[@name='picking_type_id']" position="after">
-                        <field name="reason"/>
-                        <field name="address_name"/>
-                        <field name="delegate_name"/>
+                    <field name="reason"/>
+                    <field name="address_name"/>
+                    <field name="delegate_name"/>
                 </xpath>
                 <xpath expr="//field[@name='origin']" position="after">
-                        <field name="phone"/>
-                        <field name="emai"/>
-                        <field name="description"/>
-                        <field name="status"/>
+                    <field name="phone"/>
+                    <field name="emai"/>
+                    <field name="description"/>
+                    <field name="status"/>
                 </xpath>
-            <xpath expr="//field[@name='name']" position="attributes">
-                <field name="code" string="Code">
-                </field>
-            </xpath>
-        </field>
-    </record>
-    <record id="rma_Return_action" model="ir.actions.act_window">
-        <field name="name">Phiếu nhận hàng</field>
-        <field name="type">ir.actions.act_window</field>
-        <field name="res_model">stock.picking</field>
-        <field name="view_mode">tree,form</field>
-        <field name="help" type="html">
-            <p class="o_view_nocontent_smiling_face">
-                Thêm Sản Phẩm Nào
-            </p>
-        </field>
-    </record>
-</data>
-        </odoo>
+                <xpath expr="//field[@name='name']" position="attributes">
+                    <field name="code" string="Code">
+                    </field>
+                </xpath>
+<!--                <sheet>-->
+<!--                    <group>-->
+<!--                        <field name="product_idd" />-->
+<!--                        <field name="product_qtyy" />-->
+<!--                        <field name="nhanbiet" />-->
+<!--                    </group>-->
+<!--                </sheet>-->
+            </field>
+        </record>
+        <record id="rma_Return_action" model="ir.actions.act_window">
+            <field name="name">Phiếu nhận hàng</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">stock.picking</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Thêm Sản Phẩm Nào
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>
