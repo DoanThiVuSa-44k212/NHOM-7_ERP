@@ -12,18 +12,6 @@
                         <field name="image" widget="image" class="oe_avatar" options="{'preview_image': 'image_128'}"/>
                     </group>
                 </xpath>
-                <xpath expr="//field[@name='product_id']" position="attributes">
-                    <attribute name="string">Tên Sản Phẩm</attribute>
-                </xpath>
-                <xpath expr="//label[@for='scrap_qty']" position="attributes">
-                    <attribute name="string">Số Lượng</attribute>
-                </xpath>
-                <xpath expr="//field[@name='company_id']" position="attributes">
-                    <attribute name="string">Công Ty</attribute>
-                </xpath>
-                <xpath expr="//field[@name='origin']" position="attributes">
-                    <attribute name="string">Tài Liệu Nguồn</attribute>
-                </xpath>
 
                 <sheet>
                     <group>
@@ -42,10 +30,13 @@
                         </page>
                         <page name="information" string="Thông Tin Sản Phẩm">
                             <group>
-                                <field name="categ_id"/>
-                            </group>
-                            <group>
-                                <field name="list_price"/>
+                                <group>
+                                    <field name="pr_type"/>
+                                    <field name="list_price"/>
+                                </group>
+                                <group>
+                                    <field name="weight"/>
+                                </group>
                             </group>
                         </page>
                         <page name="note" string="Ghi Chú">
