@@ -8,7 +8,7 @@ class productpreverse(models.Model):
 
     name = fields.Char(String="Tên Nghiệp Vụ")
     preserve_lines = fields.One2many('product.preserve.lines', 'preserve_id', string="Product Preserve")
-    company_id = fields.Many2one('res.company',string="Công Ty")
+    company_id = fields.Many2one('res.company', string="Công Ty")
 
     Nhietdo = fields.Selection([
         ('1', '10c->20c'),
@@ -17,15 +17,36 @@ class productpreverse(models.Model):
     datebq = fields.Date(string='Ngày nhập kho bảo quản')
     datehh = fields.Date(string='Ngày nhập kho hàng hóa')
     thoigianbaoquan = fields.Date(string='Thời gian bảo quản')
-    Kho = fields.Selection([
-        ('1', 'Kho 1'),
-        ('2', 'Kho 2'),
-        ('3', 'Kho 3'),
-    ], string="Nơi bảo quản", required=True, default='1')
+    Kho = fields.Many2one('temporary.warehouse', String="Nơi Bảo Quản")
+    diachi = fields.Text(related="Kho.diachi", string="Địa chỉ")
+    dientich = fields.Char(related="Kho.dientich", string="Diện Tích (Ha)")
 
 
 class productpreverselines(models.Model):
+
     _name = "product.preserve.lines"
+    # nhanbiet = fields.Char(string="nhanbiet")
     product_id = fields.Many2one('product.template', string="Tên Sản Phẩm")
     product_qty = fields.Integer(string="Số Lượng")
-    preserve_id = fields.Many2one('product.preserve', string ="Product Preserve")
+    list_price = fields.Float(string='Giá Bán', related="product_id.list_price")
+    sum_price = fields.Integer(string="Tổng Tiền", compute="_compute_sum_price")
+    preserve_id = fields.Many2one('product.preserve', string="Product Preserve")
+    # test = fields.Integer(string="Số Lượng Hiện tại", compute="_compute_test")
+
+
+    def _compute_sum_price(self):
+        for productpreverselines in self:
+          sum_price = 0
+          if productpreverselines.product_id and productpreverselines.product_id.list_price:
+             sum_price += (productpreverselines.product_id.list_price
+                           * productpreverselines.product_qty)
+          productpreverselines.sum_price = sum_price
+
+    # @api.onchange("test")
+    # def _compute_test(self):
+    #     chang_qty = self.env['stock.picking']
+    #     for productpreverselines in self:
+    #         tested = chang_qty.product_qtyy
+    #         if productpreverselines.product_qty and chang_qty.product_qtyy:
+    #             tested += (productpreverselines.product_qty - chang_qty.product_qtyy)
+    #         productpreverselines.test = tested
