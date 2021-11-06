@@ -18,4 +18,8 @@ class stockPicking  (models.Model):
         ("khongchapnhan", "Không Chấp Nhận"),
     ], string="Trạng Thái", default=False)
 
+    # product_idd = fields.Many2one('product.template', string="Tên Sản Phẩm")
+    # product_qtyy = fields.Integer(string="Số Lượng")
+    # nhanbiet = fields.Char(string="nhanbiet")
+
 
