@@ -28,33 +28,38 @@
                   action="product_ingredients_action"
                   parent="product_menu_view" sequence="12"/>
 
-        <!--Hàng Hóa Hỏng-->
-        <menuitem id="damaged_goods_view"
-                  name="Xử Lý Hàng Hỏng"
-                  action="rma_damaged_goods_action"
-                  parent="rma_menu_view" sequence="10"/>
-<!--        Bảo Quản Sản Phẩm-->
+        <!--Hàng Trả Về-->
+        <menuitem id="Return_action_view"
+                  name="Hàng Trả Về"
+                  action="rma_Return_action"
+                  parent="rma_menu_view" sequence="11"/>
+        <!--Bảo Quản Sản Phẩm-->
         <menuitem id="preserve_view"
                   name="Bảo Quản Sản Phẩm"
                   action="productpreserve_action"
-                  parent="rma_menu_view" sequence="10"/>
+                  parent="rma_menu_view" sequence="12"/>
 
         <menuitem id="productpreserve_action_view"
                   name="Phiếu Bảo Quản"
                   action="productpreserve_action"
-                  parent="preserve_view" sequence="11"/>
+                  parent="preserve_view" sequence="13"/>
 
         <menuitem id="temporary_warehouses"
                   name="Kho Chứa Tạm Thời"
                   action="temporary_warehouse_action"
-                  parent="preserve_view" sequence="12"/>
+                  parent="preserve_view" sequence="14"/>
 
-<!--        Hàng Trả Về-->
-        <menuitem id="Return_action_view"
-                  name="Hàng Trả Về"
-                  action="rma_Return_action"
-                  parent="rma_menu_view" sequence="10"/>
+        <!--Hàng Hóa Hỏng-->
+        <menuitem id="damaged_goods_view"
+                  name="Xử Lý Hàng Hỏng"
+                  action="rma_damaged_goods_action"
+                  parent="rma_menu_view" sequence="13"/>
 
+        <!--Khách Hàng-->
+        <menuitem id="res_partner_action_view"
+                  name="Khách Hàng"
+                  action="res_partner_action"
+                  parent="rma_menu_view" sequence="14"/>
 
     </data>
 </odoo>
