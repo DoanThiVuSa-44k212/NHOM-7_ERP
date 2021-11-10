@@ -18,6 +18,7 @@
         'Views/productpreserve.xml',
         'Views/product_ingredients.xml',
         'Views/temporary_warehouse.xml',
+        'Views/Customer.xml',
         'Views/Return.xml',
         'Menu/Menu.xml'
     ],
