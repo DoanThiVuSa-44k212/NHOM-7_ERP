@@ -32,9 +32,7 @@
                             <field name="preserve_lines">
                                 <tree editable="bottom">
                                     <field name="product_id"/>
-<!--                                    <field name="nhanbiet"/>-->
                                     <field name="product_qty"/>
-<!--                                    <field name="test"/>-->
                                     <field name="list_price"/>
                                     <field name="sum_price"/>
                                     <field name="preserve_id" invisible="1"/>
