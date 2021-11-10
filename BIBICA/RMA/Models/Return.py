@@ -6,20 +6,24 @@ class stockPicking  (models.Model):
     _inherit = 'stock.picking'
 
     image = fields.Binary(string="Hình Ảnh")
+    malohang = fields.Char(string="Mã lô hàng")
     quantity = fields.Integer(string="Số Lượng")
     reason = fields.Char(string="Lí Do Trả Hàng")
     description = fields.Text(string="Mô Tả Tình Trạng Hàng Hóa ")
     address_name = fields.Text(string="Địa Chỉ Công Ty")
-    delegate_name = fields.Many2one('res.partner', string="Tên Công Ty Trả Hàng")
+    delegate_name = fields.Char(string="Tên Đại Diện Công Ty Trả Hàng")
     phone = fields.Integer(string="Số Điện Thoại")
     emai = fields.Text(string="Email")
     status = fields.Selection([
         ("chapnhan", "Chấp Nhận"),
         ("khongchapnhan", "Không Chấp Nhận"),
     ], string="Trạng Thái", default=False)
+    httt = fields.Selection([
+        ("chuyenkhoan", "Chuyển khoản"),
+        ("tienmat", "Tiền mặt"),
+    ], string="Hình thức thanh toán", default=False)
+
 
     # product_idd = fields.Many2one('product.template', string="Tên Sản Phẩm")
     # product_qtyy = fields.Integer(string="Số Lượng")
     # nhanbiet = fields.Char(string="nhanbiet")
-
-
