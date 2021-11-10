@@ -31,7 +31,7 @@
                         <page name="information" string="Thông Tin Sản Phẩm">
                             <group>
                                 <group>
-                                    <field name="pr_type"/>
+<!--                                    <field name="pr_type"/>-->
                                     <field name="list_price"/>
                                 </group>
                                 <group>
