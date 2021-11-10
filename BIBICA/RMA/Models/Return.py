@@ -10,7 +10,7 @@ class stockPicking  (models.Model):
     reason = fields.Char(string="Lí Do Trả Hàng")
     description = fields.Text(string="Mô Tả Tình Trạng Hàng Hóa ")
     address_name = fields.Text(string="Địa Chỉ Công Ty")
-    delegate_name = fields.Char(string="Tên Đại Diện Công Ty Trả Hàng")
+    delegate_name = fields.Many2one('res.partner', string="Tên Công Ty Trả Hàng")
     phone = fields.Integer(string="Số Điện Thoại")
     emai = fields.Text(string="Email")
     status = fields.Selection([
