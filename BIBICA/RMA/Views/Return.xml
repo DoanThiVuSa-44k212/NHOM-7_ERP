@@ -10,7 +10,9 @@
 
                     <group>
                         <field name="image" widget="image" class="oe_avatar" options="{'preview_image': 'image_128'}"/>
+                        <field name="malohang"/>
                     </group>
+
                 </xpath>
                 <xpath expr="//field[@name='picking_type_id']" position="after">
                     <field name="reason"/>
@@ -22,11 +24,19 @@
                     <field name="emai"/>
                     <field name="description"/>
                     <field name="status"/>
+                    <field name="httt"/>
                 </xpath>
                 <xpath expr="//field[@name='name']" position="attributes">
                     <field name="code" string="Code">
                     </field>
                 </xpath>
+<!--                <sheet>-->
+<!--                    <group>-->
+<!--                        <field name="product_idd" />-->
+<!--                        <field name="product_qtyy" />-->
+<!--                        <field name="nhanbiet" />-->
+<!--                    </group>-->
+<!--                </sheet>-->
             </field>
         </record>
         <record id="rma_Return_action" model="ir.actions.act_window">
