@@ -27,13 +27,6 @@
                     <field name="code" string="Code">
                     </field>
                 </xpath>
-<!--                <sheet>-->
-<!--                    <group>-->
-<!--                        <field name="product_idd" />-->
-<!--                        <field name="product_qtyy" />-->
-<!--                        <field name="nhanbiet" />-->
-<!--                    </group>-->
-<!--                </sheet>-->
             </field>
         </record>
         <record id="rma_Return_action" model="ir.actions.act_window">
