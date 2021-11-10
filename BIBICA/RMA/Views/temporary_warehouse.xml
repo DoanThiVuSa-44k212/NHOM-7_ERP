@@ -1,16 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <record id="temporarywarehouse_view" model="ir.ui.view">
+        <field name="name">temporarywarehouse.view</field>
+        <field name="model">temporary.warehouse</field>
+        <field name="arch" type="xml">
+            <search string="Kho">
+                <field name="name"/>
+                <filter string="Có Thể Sử Dụng" name="fb_active" domain="[('tinhtrang', '=', True)]"/>
+                <filter string="KhôngThể Sử Dụng" name="fb_non_active" domain="[('tinhtrang', '=', False)]"/>
+            </search>
+        </field>
+    </record>
 
     <record id="temporary_warehouse_form" model="ir.ui.view">
         <field name="name">temporary_warehouse_form</field>
         <field name="model">temporary.warehouse</field>
         <field name="arch" type="xml">
             <form>
+                <header>
+                    <button name="action_inactive" string="Ngừng Hoạt Động" type="object"
+                            attrs="{'invisible': [('tinhtrang', '=', False)]}"/>
+                    <button name="action_active" string="Hoạt động trở lại"
+                            type="object" class="oe_highlight"
+                            attrs="{'invisible': [('tinhtrang', '=', True)]}"/>
+                </header>
                 <sheet>
+                    <div class="oe_title">
+                        <label for="name" string="Tên Kho" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name" placeholder="Tên Kho"/>
+                        </h1>
+                    </div>
                     <group>
                         <group name="type">
-                            <field name="name"/>
                             <field name="dientich"/>
+                            <field name="dientich1"/>
+                            <field name="succhua"/>
+                            <field name="tongdt"/>
+                            <field name="tinhtrang"/>
                         </group>
                         <group>
                             <field name="diachi"/>
