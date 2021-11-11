@@ -21,6 +21,7 @@
             <field name="arch" type="xml">
                 <field name='vat' position="after">
                     <field name="active" string="Còn Liên Lạc"/>
+                    <field name="donhang_count" string='Số Đơn Hàng Trả Lại'/>
                 </field>
                 <field name='function' position="after">
                     <field name="cmnd" placeholder="VD: 123456789" attrs="{'invisible': [('is_company','=', True)]}"/>
