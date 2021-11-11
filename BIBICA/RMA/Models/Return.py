@@ -7,12 +7,11 @@ class stockPicking  (models.Model):
 
     image = fields.Binary(string="Hình Ảnh")
     malohang = fields.Char(string="Mã Lô Hàng")
-    create_date=fields.Datetime(string="Ngày Tạo Phiếu")
+    create_date=fields.Date(string="Ngày Tạo Phiếu", default = lambda self: fields.Date.today ())
     quantity = fields.Integer(string="Số Lượng")
     reason = fields.Char(string="Lí Do Trả Hàng")
     description = fields.Text(string="Mô Tả Tình Trạng Thực Tế ")
     address_name = fields.Text(string="Địa Chỉ Công Ty")
-    delegate_name = fields.Char(string="Tên Công Ty Trả Hàng")
     phone = fields.Integer(string="Số Điện Thoại")
     email = fields.Text(string="Email")
     make_vote = fields.Many2one('hr.employee', string='Người Tạo Phiếu', required=True)
