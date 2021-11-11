@@ -17,8 +17,12 @@ class respartner(models.Model):
         ('4', 'Công Ty Hợp Danh'),
         ('5', 'Doanh Nghiệp Tư Nhân'),
     ], string="Loại Hình Pháp Lý")
+    donhang_count = fields.Integer(string='Số Đơn Hàng Trả Lại', compute='compute_count_cus')
     active = fields.Boolean(string='Còn Liên Lạc', default=True)
 
+    def compute_count_cus(self):
+        donhang_count= self.env['stock.picking'].search_count([('partner_id', '=', self.id)])
+        self.donhang_count = donhang_count
 
     def action_inactive(self):
         self.write({'active': False})
