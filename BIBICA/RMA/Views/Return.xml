@@ -8,9 +8,6 @@
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='name']" position="after">
                     <group>
-                        <field name="create_date"/>
-                    </group>
-                    <group>
                         <field name="image" widget="image" class="oe_avatar" options="{'preview_image': 'image_128'}"/>
                     </group>
                 </xpath>
@@ -18,8 +15,8 @@
                     <field name="make_vote"/>
                     <field name="malohang"/>
                     <field name="address_name"/>
-                    <field name="delegate_name"/>
-                     <field name="phone"/>
+                    <field name="phone"/>
+                    <field name="create_date"/>
 
                 </xpath>
                 <xpath expr="//field[@name='origin']" position="after">
