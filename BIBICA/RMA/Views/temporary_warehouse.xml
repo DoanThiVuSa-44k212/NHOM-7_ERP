@@ -54,7 +54,8 @@
         <field name="arch" type="xml">
             <tree string="product_ingredients" default_order="create_date desc">
                 <field name="name"/>
-                <field name="dientich"/>
+                <field name="succhua"/>
+                <field name="tongdt"/>
                 <field name="diachi"/>
             </tree>
         </field>
