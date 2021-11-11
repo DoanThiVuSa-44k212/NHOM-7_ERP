@@ -20,6 +20,8 @@
         'Views/temporary_warehouse.xml',
         'Views/Customer.xml',
         'Views/Return.xml',
+        'report/return_report.xml',
+        'report/return_form_report.xml',
         'Menu/Menu.xml'
     ],
     'demo': [],
