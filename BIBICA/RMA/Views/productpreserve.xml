@@ -56,7 +56,8 @@
                         <page string="Thông Tin Kho Chứa">
                             <group>
                                 <field name="diachi" string="Địa Chỉ"/>
-                                <field name="dientich" string="Diện Tích"/>
+                                <field name="dientich" string="Diện Tích Bãi"/>
+                                <field name="dientich1" string="Diện Tích kho"/>
                             </group>
                         </page>
                     </notebook>
