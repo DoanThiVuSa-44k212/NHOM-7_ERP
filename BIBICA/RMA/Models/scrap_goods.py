@@ -15,6 +15,6 @@ class StockScrap(models.Model):
     employee = fields.Many2many('hr.employee', string='Tên Nhân Viên', required=True)
     image = fields.Binary(string="Hình Ảnh")
     note = fields.Text(string="Ghi Chú")
-    # pr_type = fields.Many2one(comodel_name='product.type', related="product_id.pr_type", string="Loại Sản Phẩm", delegate=True)
+    pr_type = fields.Many2one(comodel_name='product.category', related="product_id.pr_type", string="Loại Sản Phẩm", delegate=True)
     list_price = fields.Float(string='Giá Bán', related ="product_id.list_price")
     weight = fields.Float(related ="product_id.weight", string='Cân Nặng')
