@@ -6,3 +6,4 @@ class productcategory(models.Model):
 
     unit_of_measure = fields.Many2one('uom.uom', string='Đơn Vị Tính')
     description = fields.Text(string="Mô Tả")
+    
