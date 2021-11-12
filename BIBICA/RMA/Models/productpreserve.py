@@ -5,7 +5,7 @@ class productpreverse(models.Model):
     _name = "product.preserve"
     _description = "RMA Product Preserve"
 
-    name = fields.Char(String="Tên Nghiệp Vụ")
+    name = fields.Char(String="Tên Nghiệp Vụ", required=True)
     preserve_lines = fields.One2many('product.preserve.lines', 'preserve_id', string="Product Preserve")
     company_id = fields.Many2one('res.company', string="Công Ty")
 
@@ -13,8 +13,8 @@ class productpreverse(models.Model):
         ('1', '10c->20c'),
         ('2', '20c->30c'),
     ], string="Nhiệt độ bảo quản", required=True, default='1')
-    datebq = fields.Date(string='Ngày nhập kho bảo quản')
-    datehh = fields.Date(string='Ngày nhập kho hàng hóa')
+    datebq = fields.Date(string='Ngày nhập kho bảo quản', required=True)
+    datehh = fields.Date(string='Ngày nhập kho hàng hóa', required=True)
     thoigianbaoquan = fields.Date(string='Thời gian bảo quản')
     datechamsocdinhki = fields.Date(string='Ngày theo dõi hàng hóa định kì')
     Kho = fields.Many2one('temporary.warehouse', String="Nơi Bảo Quản")
