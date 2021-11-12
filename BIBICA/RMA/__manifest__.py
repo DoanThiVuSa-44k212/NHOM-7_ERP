@@ -9,7 +9,8 @@
     'depends': [
         'product',
         'stock',
-        'uom'
+        'uom',
+        'board'
     ],
     'data': [
         'Views/Products.xml',
@@ -20,8 +21,7 @@
         'Views/temporary_warehouse.xml',
         'Views/Customer.xml',
         'Views/Return.xml',
-        'report/return_report.xml',
-        'report/return_form_report.xml',
+        'Views/dashboard.xml',
         'Menu/Menu.xml'
     ],
     'demo': [],
