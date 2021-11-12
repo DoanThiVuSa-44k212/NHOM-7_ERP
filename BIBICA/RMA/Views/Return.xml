@@ -11,7 +11,13 @@
                         <field name="image" widget="image" class="oe_avatar" options="{'preview_image': 'image_128'}"/>
                     </group>
                 </xpath>
-                <xpath expr="//field[@name='picking_type_id']" position="after">
+                <!--                 <xpath expr="//field[@name='picking_type_id']" position="attributes">-->
+                <!--                    <attribute name="invisible">1</attribute>-->
+                <!--                </xpath>-->
+                <!--                <xpath expr="//label[@for='picking_type_id']" position="attributes">-->
+                <!--                    <attribute name="invisible">1</attribute>-->
+                <!--                </xpath>-->
+                <xpath expr="//field[@name='partner_id']" position="after">
                     <field name="make_vote"/>
                     <field name="malohang"/>
                     <field name="address_name"/>
@@ -23,6 +29,7 @@
 
                     <field name="email"/>
                     <field name="reason"/>
+                    <field name="khac" attrs="{'invisible':[('reason', 'not in', '5')]}"/>
                     <field name="description"/>
                     <field name="ship"/>
                     <field name="httt"/>
@@ -32,6 +39,35 @@
                 <xpath expr="//field[@name='name']" position="attributes">
                     <field name="code" string="Code">
                     </field>
+                </xpath>
+                <xpath expr="//page" position="after">
+                    <page string="Các Thành Phần" attrs="{'invisible':[('reason', 'not in', '1')]}">
+                        <field name="tp_line">
+                            <tree editable="bottom">
+                                <field name="product"/>
+                                <field name="tentp"/>
+                                <field name="soluongtt"/>
+                                <field name="ghichu"/>
+                                <field name="thanhphan_id" invisible="1"/>
+                            </tree>
+                            <form>
+                                <group>
+                                    <group>
+                                        <field name="product"/>
+                                    </group>
+                                    <group>
+                                        <field name="tentp"/>
+                                    </group>
+                                    <group>
+                                        <field name="soluongtt"/>
+                                    </group>
+                                    <group>
+                                        <field name="ghichu"/>
+                                    </group>
+                                </group>
+                            </form>
+                        </field>
+                    </page>
                 </xpath>
             </field>
         </record>
