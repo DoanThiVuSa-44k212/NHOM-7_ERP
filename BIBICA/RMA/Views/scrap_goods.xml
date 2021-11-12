@@ -49,11 +49,33 @@
             </field>
         </record>
 
+        <record id="stockscrap_pivot" model="ir.ui.view">
+            <field name="name">stock.scrap.pivot</field>
+            <field name="model">stock.scrap</field>
+            <field name="arch" type="xml">
+                <pivot string="Cột">
+                    <field name="product_id" type="row"/>
+                    <field name="processing_date" type="col" interval="day"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record id="stockscrap_graph" model="ir.ui.view">
+            <field name="name">stock.scrap.graph</field>
+            <field name="model">stock.scrap</field>
+            <field name="arch" type="xml">
+                <graph string="Sản Phẩm Hoàn Trả">
+                    <field name="product_id"/>
+                    <field name="scrap_qty" type="measure"/>
+                </graph>
+            </field>
+        </record>
+
         <record id="rma_damaged_goods_action" model="ir.actions.act_window">
             <field name="name">Xử Lý Hàng Hỏng</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">stock.scrap</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree,form,pivot,graph</field>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
                     Thêm Sản Phẩm Nào
