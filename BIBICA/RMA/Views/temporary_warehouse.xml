@@ -37,6 +37,8 @@
                             <field name="dientich1"/>
                             <field name="succhua"/>
                             <field name="tongdt"/>
+                        </group>
+                        <group>
                             <field name="tinhtrang"/>
                         </group>
                         <group>
