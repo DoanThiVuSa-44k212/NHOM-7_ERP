@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="act_stock_picking" model="ir.actions.act_window">
+        <field name="name">stockdash</field>
+        <field name="res_model">stock.picking</field>
+        <field name="view_mode">graph</field>
+        <field name="view_id" ref="RMA.stockpicking_graph"/>
+    </record>
+
+    <record id="act_stock_scrap" model="ir.actions.act_window">
+        <field name="name">stockscrapdash</field>
+        <field name="res_model">stock.scrap</field>
+        <field name="view_mode">graph</field>
+        <field name="view_id" ref="RMA.stockscrap_graph"/>
+    </record>
+
+    <record id="dashboard_form_view" model="ir.ui.view">
+        <field name="name">Dashboard</field>
+        <field name="model">board.board</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Dashboard">
+                <board style="1-2">
+                    <column>
+                        <action
+                                string="Hàng Trả Về"
+                                name="%(RMA.act_stock_picking)d"/>
+                    </column>
+                    <column>
+                        <action
+                                string="Xử Lý Hàng Hỏng"
+                                name="%(act_stock_scrap)d"/>
+                    </column>
+                </board>
+            </form>
+        </field>
+    </record>
+
+    <record id="rma_dashboard" model="ir.actions.act_window">
+        <field name="name">Dashboard.act</field>
+        <field name="res_model">board.board</field>
+        <field name="view_mode">form</field>
+        <field name="usage">menu</field>
+        <field name="view_id" ref="dashboard_form_view"/>
+    </record>
+</odoo>
