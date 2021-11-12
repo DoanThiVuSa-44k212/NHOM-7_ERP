@@ -20,13 +20,11 @@
         <field name="type">form</field>
         <field name="arch" type="xml">
             <form string="Dashboard">
-                <board style="1-2">
+                <board>
                     <column>
                         <action
                                 string="Hàng Trả Về"
                                 name="%(RMA.act_stock_picking)d"/>
-                    </column>
-                    <column>
                         <action
                                 string="Xử Lý Hàng Hỏng"
                                 name="%(act_stock_scrap)d"/>
