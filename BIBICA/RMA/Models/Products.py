@@ -13,6 +13,11 @@ class ProductTemplate(models.Model):
     hansudung = fields.Char(string="Hạn Sử Dụng")
     baohanh = fields.Char(string="Bảo Hành")
     thanhphan_lines = fields.One2many('product.template.lines', 'thanhphan_id')
+    trahang_count = fields.Integer(string='Số Đơn Hàng Trả Lại', compute='compute_count_cus')
+
+    def compute_count_cus(self):
+        trahang_count= self.env['stock.picking'].search_count([('product_id', '=', self.id)])
+        self.trahang_count = trahang_count
 
 class ProductTemplateLines(models.Model):
     _name = 'product.template.lines'
