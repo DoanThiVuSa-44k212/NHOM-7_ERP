@@ -6,9 +6,11 @@
             <field name="model">product.category</field>
             <field name="inherit_id" ref="product.product_category_form_view"/>
             <field name="arch" type="xml">
-                <field name='name' position="after">
-                    <field name="description"/>
-                    <field name="unit_of_measure"/>
+                <field name='parent_id' position="after">
+                    <group>
+                        <field name="unit_of_measure"/>
+                        <field name="description"/>
+                    </group>
                 </field>
             </field>
         </record>
