@@ -61,6 +61,12 @@
                   action="rma_damaged_goods_action"
                   parent="rma_menu_view" sequence="14"/>
 
+        <!--Dashboard-->
+        <menuitem id="Dashboard_act_view"
+                  name="Dashboard"
+                  action="rma_dashboard"
+                  parent="rma_menu_view" sequence="15"/>
+
 
 
     </data>
