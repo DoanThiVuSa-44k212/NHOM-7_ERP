@@ -15,6 +15,7 @@
                 </field>
                 <field name='weight' position="after">
                     <field name="unit_of_measure"/>
+                    <field name="trahang_count"/>
                 </field>
                 <xpath expr="//field[@name='purchase_ok']" position="attributes">
                     <attribute name="invisible">1</attribute>
