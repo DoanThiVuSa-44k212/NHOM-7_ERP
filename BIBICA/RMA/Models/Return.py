@@ -19,9 +19,9 @@ class stockPicking(models.Model):
     khac = fields.Char(string="Khác")
     tp_line = fields.One2many('product.tp.lines', 'thanhphan_id')
     description = fields.Text(string="Mô Tả Tình Trạng Thực Tế ")
-    address_name = fields.Text(string="Địa Chỉ Công Ty")
-    phone = fields.Integer(string="Số Điện Thoại")
-    email = fields.Text(string="Email")
+    street = fields.Char(related="partner_id.street",string="Địa Chỉ Công Ty")
+    phone = fields.Char(related="partner_id.phone",string="Số Điện Thoại")
+    email = fields.Char(related="partner_id.email",string="Email")
     make_vote = fields.Many2one('hr.employee', string='Người Tạo Phiếu', required=True)
     ship = fields.Selection([
         ("thuenguoichuyen", "Thuê Đơn Vị Vận Chuyển "),
