@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+            id="report_stock_record"
+            model="stock.scrap"
+            string="Báo cáo"
+            report_type="qweb-pdf"
+            name="RMA.stock_scrap_record"
+            file="RMA.stock_scrap_record"/>
+
+</odoo>
