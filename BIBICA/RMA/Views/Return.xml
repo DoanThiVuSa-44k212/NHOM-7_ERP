@@ -20,7 +20,7 @@
                 <xpath expr="//field[@name='partner_id']" position="after">
                     <field name="make_vote"/>
                     <field name="malohang"/>
-                    <field name="address_name"/>
+                    <field name="street"/>
                     <field name="phone"/>
                     <field name="create_date"/>
 
