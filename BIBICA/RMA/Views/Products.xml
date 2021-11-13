@@ -26,6 +26,9 @@
                 <xpath expr="//field[@name='categ_id']" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </xpath>
+                <xpath expr="//field[@name='type']" position="attributes">
+                    <attribute name="string">Thuộc Tính Sản Phẩm</attribute>
+                </xpath>
                 <field name='company_id' position="after">
                     <field name="hansudung"/>
                 </field>
