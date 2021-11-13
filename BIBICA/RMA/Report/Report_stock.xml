@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="stock_scrap_record">
+        <t t-call="web.external_layout">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <div class="page">
+                        <div class="oe_structure"/>
+                        <div class="col-xs-8">
+                            <tr>
+                                <td width="100%">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <span>
+                                                    <strong>Sản Phẩm:</strong>
+                                                </span>
+                                            </td>
+                                            <td colspan="6" class="text-center">
+                                                <span t-field="o.product_id"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>
+                                                    <strong>Số Lượng:</strong>
+                                                </span>
+                                            </td>
+                                            <td colspan="6" class="text-center">
+                                                <span t-field="o.scrap_qty"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>
+                                                    <strong>Trạng Thái:</strong>
+                                                </span>
+                                            </td>
+                                            <td colspan="6" class="text-center">
+                                                <span t-field="o.product_status"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>
+                                                    <strong>Ngày Xử Lý Hàng Hóa:</strong>
+                                                </span>
+                                            </td>
+                                            <td colspan="6" class="text-center">
+                                                <span t-field="o.processing_date"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>
+                                                    <strong>Công Ty:</strong>
+                                                </span>
+                                            </td>
+                                            <td colspan="6" class="text-center">
+                                                <span t-field="o.company_id"/>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <span>
+                                                    <strong>Ngày Nhập Kho Sản Phẩm:</strong>
+                                                </span>
+                                            </td>
+                                            <td colspan="6" class="text-center">
+                                                <span t-field="o.input_date"/>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <span>
+                                                    <strong>Nhân Viên Xử Lý:</strong>
+                                                </span>
+                                            </td>
+                                            <td colspan="6" class="text-center">
+                                                <span t-field="o.employee"/>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </td>
+                            </tr>
+                        </div>
+                    </div>
+                    <br/>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
