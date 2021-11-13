@@ -22,6 +22,8 @@
         'Views/Customer.xml',
         'Views/Return.xml',
         'Views/dashboard.xml',
+        'Report/Report.xml',
+        'Report/Report_stock.xml',
         'Menu/Menu.xml'
     ],
     'demo': [],
