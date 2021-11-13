@@ -10,8 +10,8 @@ class productpreverse(models.Model):
     company_id = fields.Many2one('res.company', string="Công Ty")
 
     Nhietdo = fields.Selection([
-        ('1', '10c->20c'),
-        ('2', '20c->30c'),
+        ('1', '10 - 20'),
+        ('2', '20 - 0'),
     ], string="Nhiệt độ bảo quản", required=True, default='1')
     datebq = fields.Date(string='Ngày nhập kho bảo quản', required=True)
     datehh = fields.Date(string='Ngày nhập kho hàng hóa', required=True)
@@ -32,8 +32,8 @@ class productpreverselines(models.Model):
     _name = "product.preserve.lines"
     product_id = fields.Many2one('product.template', string="Tên Sản Phẩm")
     product_qty = fields.Integer(string="Số Lượng")
-    list_price = fields.Float(string='Giá Bán', related="product_id.list_price")
-    sum_price = fields.Integer(string="Tổng Tiền", compute="_compute_sum_price")
+    list_price = fields.Float(string='Giá Trị Sản Phẩm', related="product_id.list_price")
+    sum_price = fields.Integer(string="Tổng Giá Trị Sản Phẩm", compute="_compute_sum_price")
     preserve_id = fields.Many2one('product.preserve', string="Product Preserve")
 
 
