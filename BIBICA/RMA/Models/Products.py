@@ -16,7 +16,7 @@ class ProductTemplate(models.Model):
     trahang_count = fields.Integer(string='Số Đơn Hàng Trả Lại', compute='compute_count_cus')
 
     def compute_count_cus(self):
-        trahang_count= self.env['stock.picking'].search_count([('product_id', '=', self.id)])
+        trahang_count= self.env['stock.picking'].search_count([('product_id', '=', self.name)])
         self.trahang_count = trahang_count
 
 class ProductTemplateLines(models.Model):
